@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabit Timilsina, E.I.T. | Structural Engineer</title>
+<meta name="description" content="Portfolio of Sabit Timilsina, E.I.T., a structural engineer finishing an M.S. in Civil Engineering (Structural) at Louisiana State University. Seismic design, prestressed concrete, nonlinear analysis and concrete materials testing.">
+<meta name="author" content="Sabit Timilsina">
+<!-- Open Graph: link previews on LinkedIn and in email. Update the URLs once the GitHub username is final. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sabit Timilsina, E.I.T. | Structural Engineer">
+<meta property="og:description" content="Structural engineer (EIT) finishing an M.S. in Civil Engineering (Structural) at LSU. Projects in seismic design, prestressed concrete and nonlinear analysis.">
+<meta property="og:url" content="https://sabittimilsina.github.io/">
+<meta property="og:image" content="https://sabittimilsina.github.io/images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%23ffffff' stroke='%231f4f7b' stroke-width='5'/%3E%3Ctext x='32' y='42' font-family='Arial,Helvetica,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%231f4f7b'%3EST%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a clean drawing sheet. White paper, thin rules, one steel-blue accent,
+   a title-block of key facts, and structural grid bubbles numbering the projects. */
+:root {
+  --paper: #ffffff;
+  --panel: #f4f6f8;
+  --ink: #16212c;
+  --ink-2: #4b5a68;
+  --rule: #d6dde4;
+  --accent: #1f4f7b;
+  --accent-ink: #ffffff;
+  --accent-soft: #e9f0f6;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --wrap: 1080px;
+  --header-h: 64px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: calc(var(--header-h) + 12px); -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+}
+body.noscroll { overflow: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3 { line-height: 1.2; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+ul { margin: 0; padding-left: 1.15em; }
+li + li { margin-top: 0.3em; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+.mono { font-family: var(--font-mono); }
+.muted { color: var(--ink-2); }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  background: rgba(255,255,255,0.96);
+  border-bottom: 1px solid var(--rule);
+  backdrop-filter: saturate(1.4) blur(6px);
+}
+.header-row { display: flex; align-items: center; gap: 16px; min-height: var(--header-h); }
+.brand { font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; font-size: 1.02rem; }
+.brand span { color: var(--ink-2); font-weight: 500; }
+.nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.nav a {
+  color: var(--ink-2); text-decoration: none; font-size: 0.92rem; font-weight: 500;
+  padding: 6px 10px; border-radius: 4px;
+}
+.nav a:hover { color: var(--ink); background: var(--panel); }
+.nav a.active { color: var(--accent); }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 0.92rem/1 var(--font-body);
+  padding: 11px 16px; border-radius: 4px; text-decoration: none;
+  border: 1.5px solid var(--accent); cursor: pointer;
+}
+.btn-solid { background: var(--accent); color: var(--accent-ink); }
+.btn-solid:hover { background: #173d61; border-color: #173d61; }
+.btn-line { background: transparent; color: var(--accent); }
+.btn-line:hover { background: var(--accent-soft); }
+.nav .btn { margin-left: 8px; padding: 9px 14px; color: var(--accent-ink); }
+.nav .btn:hover { background: #173d61; color: var(--accent-ink); }
+.nav-toggle {
+  display: none; margin-left: auto;
+  background: none; border: 1.5px solid var(--rule); border-radius: 4px;
+  font: 500 0.9rem var(--font-body); color: var(--ink); padding: 8px 12px; cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .nav-toggle { display: inline-block; }
+  .nav {
+    display: none; position: absolute; left: 0; right: 0; top: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    background: var(--paper); border-bottom: 1px solid var(--rule);
+    padding: 8px 20px 16px;
+  }
+  .site-header.nav-open .nav { display: flex; }
+  .nav a { padding: 12px 4px; border-bottom: 1px solid var(--panel); border-radius: 0; font-size: 1rem; }
+  .nav .btn { margin: 12px 0 0; justify-content: center; border-bottom: 1.5px solid var(--accent); border-radius: 4px; }
+}
+
+/* Sections */
+section { padding: 72px 0; border-top: 1px solid var(--rule); }
+section.hero { border-top: 0; padding: 56px 0 64px; }
+.section-head { display: grid; gap: 8px; margin-bottom: 32px; max-width: 68ch; }
+.section-head h2 { font-size: 1.75rem; font-weight: 600; }
+.section-head p { color: var(--ink-2); }
+
+/* Hero */
+.hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: start; }
+.hero h1 { font-size: clamp(2.1rem, 4.6vw, 3rem); font-weight: 700; letter-spacing: -0.01em; }
+.hero h1 .pe { color: var(--ink-2); font-weight: 500; }
+.tagline { font-size: 1.2rem; color: var(--ink); margin-top: 12px; max-width: 34ch; }
+.intro { margin-top: 20px; color: var(--ink-2); max-width: 60ch; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.contact-line { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 22px; font-size: 0.95rem; }
+.contact-line a { text-decoration: none; }
+.contact-line a:hover { text-decoration: underline; }
+
+/* Title block (key facts) */
+.title-block { border: 1.5px solid var(--ink); font-size: 0.95rem; }
+.title-block .tb-head {
+  display: flex; justify-content: space-between; gap: 12px;
+  background: var(--ink); color: #fff; padding: 8px 14px;
+  font: 500 0.78rem/1.3 var(--font-mono); letter-spacing: 0.04em; text-transform: uppercase;
+}
+.title-block dl { margin: 0; display: grid; grid-template-columns: 9.5em 1fr; }
+.title-block dt, .title-block dd { margin: 0; padding: 10px 14px; border-top: 1px solid var(--rule); }
+.title-block dl > :nth-child(1), .title-block dl > :nth-child(2) { border-top: 0; }
+.title-block dt {
+  font: 500 0.74rem/1.5 var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--ink-2); border-right: 1px solid var(--rule); padding-top: 12px;
+}
+.title-block dd { font-weight: 500; }
+
+/* Grid bubble */
+.bubble {
+  flex: none; display: inline-grid; place-items: center;
+  width: 2.3rem; height: 2.3rem; border-radius: 50%;
+  border: 1.5px solid var(--accent); color: var(--accent);
+  font: 500 1rem/1 var(--font-mono); background: var(--paper);
+}
+
+/* Project cards */
+.card { border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); padding: 24px; display: grid; gap: 16px; align-content: start; }
+.card-head { display: flex; gap: 14px; align-items: flex-start; }
+.card-head h3 { font-size: 1.2rem; font-weight: 600; }
+.meta { font: 400 0.82rem/1.5 var(--font-mono); color: var(--ink-2); margin-top: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; }
+.chips li { margin: 0; font: 500 0.78rem/1 var(--font-mono); padding: 6px 8px; border-radius: 3px; background: var(--panel); color: var(--ink); }
+.label { font: 500 0.74rem/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 4px; }
+
+.lead { border: 1.5px solid var(--accent); padding: 28px; }
+.lead-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.lead-text { display: grid; gap: 18px; }
+.lead-figs { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+.lead-figs .zoom:first-child { grid-column: 1 / -1; }
+.lead-tag { display: inline-block; font: 500 0.72rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-ink); background: var(--accent); padding: 5px 8px; border-radius: 3px; margin-bottom: 8px; }
+
+.results { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.results th, .results td { text-align: left; padding: 7px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.results th { font-weight: 400; color: var(--ink-2); padding-right: 12px; }
+.results td { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
+.results tr:last-child th, .results tr:last-child td { border-bottom: 0; }
+
+.zoom {
+  display: block; padding: 0; margin: 0; border: 1px solid var(--rule); border-radius: 4px;
+  background: #fff; cursor: zoom-in; text-align: left; font: inherit; color: inherit; overflow: hidden;
+}
+.zoom:hover { border-color: var(--accent); }
+.zoom img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; padding: 6px; }
+.zoom .cap { display: block; font-size: 0.8rem; color: var(--ink-2); padding: 6px 10px 8px; border-top: 1px solid var(--rule); line-height: 1.4; }
+
+details.more { border-top: 1px solid var(--rule); padding-top: 14px; }
+details.more summary { cursor: pointer; font-weight: 600; color: var(--accent); list-style: none; display: inline-flex; align-items: center; gap: 8px; }
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::before { content: "+"; font-family: var(--font-mono); font-weight: 500; width: 1.2em; height: 1.2em; display: inline-grid; place-items: center; border: 1.5px solid var(--accent); border-radius: 50%; font-size: 0.85rem; line-height: 1; }
+details.more[open] summary::before { content: "\2212"; }
+.more-body { display: grid; gap: 16px; margin-top: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 0.95rem; }
+.more-body h4 { margin: 0 0 6px; font-size: 0.95rem; font-weight: 600; }
+
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 20px; }
+.card-figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 4px; }
+.card-figs.one { grid-template-columns: 1fr; }
+.card-figs.one .zoom img { aspect-ratio: 16 / 10; }
+.card-figs.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card .results td { white-space: normal; }
+.small-list { font-size: 0.92rem; }
+
+/* Research */
+.two-col { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+.block + .block { margin-top: 32px; }
+.block h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; }
+.pubs { list-style: none; padding: 0; display: grid; gap: 14px; }
+.pubs li { margin: 0; padding-left: 14px; border-left: 2px solid var(--rule); }
+.pubs .status { font: 500 0.74rem/1 var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-2); display: block; margin-bottom: 4px; }
+.photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.photo-row .zoom img { aspect-ratio: 1 / 1; object-fit: cover; padding: 0; }
+
+/* Experience timeline */
+.timeline { display: grid; gap: 0; }
+.job { display: grid; grid-template-columns: 11rem 1fr; gap: 24px; padding: 22px 0; border-top: 1px solid var(--rule); }
+.job:first-child { border-top: 0; padding-top: 0; }
+.job .when { font: 400 0.85rem/1.6 var(--font-mono); color: var(--ink-2); }
+.job h3 { font-size: 1.1rem; font-weight: 600; }
+.job .org { color: var(--ink-2); margin: 2px 0 10px; }
+
+/* Education & licenses */
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.edu { border: 1px solid var(--rule); border-radius: 6px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.edu h3 { font-size: 1.1rem; font-weight: 600; }
+.edu .course { font-size: 0.9rem; color: var(--ink-2); }
+.licenses { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.license { display: flex; gap: 14px; align-items: flex-start; padding: 18px 22px; background: var(--panel); border-radius: 6px; }
+.license .badge { font: 600 0.78rem/1 var(--font-mono); color: var(--accent); border: 1.5px solid var(--accent); border-radius: 3px; padding: 6px 7px; background: #fff; white-space: nowrap; }
+
+/* Skills */
+.skills { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.skill { padding: 18px 20px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.skill:nth-child(3n) { border-right: 0; }
+.skill:nth-last-child(-n+3) { border-bottom: 0; }
+.skill h3 { font: 500 0.76rem/1.4 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 8px; }
+.skill p { font-size: 0.95rem; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.contact-item { border-top: 2px solid var(--accent); padding-top: 12px; }
+.contact-item .label { color: var(--ink-2); }
+.contact-item a, .contact-item span { font-weight: 500; word-break: break-word; }
+
+/* Footer, styled like a drawing title strip */
+.site-footer { border-top: 1.5px solid var(--ink); margin-top: 0; }
+.footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding: 18px 20px; font: 400 0.8rem/1.5 var(--font-mono); color: var(--ink-2); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 50; background: rgba(16, 24, 32, 0.88);
+  display: grid; place-items: center; padding: 56px 16px 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox figure { margin: 0; max-width: min(1100px, 100%); max-height: 100%; display: grid; gap: 10px; }
+.lightbox img { max-height: calc(100vh - 140px); width: auto; margin: 0 auto; background: #fff; border-radius: 4px; }
+.lightbox figcaption { color: #fff; text-align: center; font-size: 0.95rem; }
+.lb-close {
+  position: absolute; top: 12px; right: 12px; background: #fff; color: var(--ink);
+  border: 0; border-radius: 4px; font: 600 0.9rem var(--font-body); padding: 9px 14px; cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero-grid, .lead-grid, .two-col { grid-template-columns: 1fr; gap: 32px; }
+  .contact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .skill:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .skill:nth-child(2n) { border-right: 0; }
+  .skill:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
+  .skill:nth-last-child(-n+2) { border-bottom: 0; }
+}
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  section { padding: 52px 0; }
+  .project-grid, .edu-grid, .licenses, .more-body { grid-template-columns: 1fr; }
+  .lead { padding: 20px; }
+  .card { padding: 20px; }
+  .job { grid-template-columns: 1fr; gap: 6px; }
+  .skills { grid-template-columns: 1fr; }
+  .skill, .skill:nth-child(3n) { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .skill:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
+  .skill:last-child { border-bottom: 0; }
+  .title-block dl { grid-template-columns: 7.5em 1fr; }
+  .brand span { display: none; }
+}
+@media (max-width: 420px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .lead-figs { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-row">
+    <a class="brand" href="#home">Sabit Timilsina<span>, E.I.T.</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav" id="site-nav" aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-solid" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- Home -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Sabit Timilsina<span class="pe">, E.I.T.</span></h1>
+      <p class="tagline">Structural engineer (EIT) finishing an M.S. in Civil Engineering (Structural) at LSU, graduating December 2026.</p>
+      <p class="intro">My projects cover seismic design of concrete buildings, prestressed and composite bridge members, and nonlinear analysis. In the lab I test concrete materials, including UHPC and underwater concrete mixes. I am looking for an entry-level role in structural, bridge, forensic or geotechnical engineering.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <a class="btn btn-line" href="#projects">See projects</a>
+      </div>
+      <div class="contact-line">
+        <a href="mailto:sabittimilsina@gmail.com">sabittimilsina@gmail.com</a>
+        <a href="tel:+12252209884">(225) 220-9884</a>
+        <a href="https://www.linkedin.com/in/sabittimilsina" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="title-block" aria-label="Key facts">
+      <div class="tb-head"><span>Key facts</span><span>Nov 2026</span></div>
+      <dl>
+        <dt>Degree</dt><dd>M.S. Civil Engineering (Structural), LSU, Dec 2026</dd>
+        <dt>License</dt><dd>Engineer-in-Training (EIT), Maryland</dd>
+        <dt>GPA</dt><dd class="mono">4.14 / 4.30</dd>
+        <dt>Codes</dt><dd>ACI 318, ASCE 7, ASCE 41, AASHTO LRFD</dd>
+        <dt>Analysis</dt><dd>ETABS, SAP2000, STAAD.Pro, OpenSees, Abaqus</dd>
+        <dt>Location</dt><dd>Baton Rouge, LA. Open to relocation.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Projects</h2>
+      <p>Design, analysis and simulation projects from my M.S. at LSU and my bachelor's degree in Nepal. Click any figure to enlarge it.</p>
+    </div>
+
+    <!-- Lead project -->
+    <article class="card lead" id="project-seismic">
+      <div class="card-head">
+        <span class="bubble" aria-hidden="true">1</span>
+        <div>
+          <span class="lead-tag">Featured</span>
+          <h3>Seismic Design and Pushover Analysis of a 3-Story RC Moment Frame</h3>
+          <p class="meta">2025 · LSU, CE 7409 Advanced Concrete Theory · Individual project</p>
+        </div>
+      </div>
+      <ul class="chips" aria-label="Tools and codes">
+        <li>ETABS</li><li>OpenSees</li><li>ASCE 7-22</li><li>ACI 318-19</li><li>ASCE 41</li>
+      </ul>
+
+      <div class="lead-grid">
+        <div class="lead-text">
+          <p>I designed a three-story reinforced concrete special moment frame building (30 ft × 30 ft plan, 15 ft bays and story heights) in ETABS, using the ASCE 7-22 equivalent lateral force procedure and ACI 318-19 seismic detailing. I then modeled one frame in OpenSees with nonlinear fiber-section columns and ran a pushover analysis to compare its real lateral strength and drift capacity with the code design forces.</p>
+
+          <div>
+            <p class="label">My role</p>
+            <p>Individual course project. I set up the geometry and loads, built and designed the ETABS model, checked the strong-column weak-beam and other detailing requirements, built the OpenSees model, ran the pushover analysis and wrote the report.</p>
+          </div>
+
+          <div>
+            <p class="label">Key results</p>
+            <table class="results">
+              <tbody>
+                <tr><th scope="row">Fundamental period (ETABS)</th><td>0.425 s</td></tr>
+                <tr><th scope="row">Max. elastic story drift, design loads</th><td>0.0098%</td></tr>
+                <tr><th scope="row">Design base shear (ETABS, ELF)</th><td>12.37 kip</td></tr>
+                <tr><th scope="row">Peak base shear, 2D frame (OpenSees)</th><td>≈ 172 kip</td></tr>
+                <tr><th scope="row">Base shear at 7% interstory drift</th><td>≈ 125 kip</td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top:10px">The frame kept more than 70% of its peak strength past the 1%, 2% and 4% drift levels for Immediate Occupancy, Life Safety and Collapse Prevention (ASCE 41 performance levels).</p>
+          </div>
+        </div>
+
+        <div class="lead-figs">
+          <button class="zoom" type="button" data-caption="Pushover curve: base shear vs. maximum interstory drift, with IO, LS and CP drift levels">
+            <img src="images/seismic-pushover-drift.png" alt="Pushover curve of base shear versus maximum interstory drift ratio, peaking near 172 kip at about 0.9% drift and dropping to about 125 kip at 7% drift, with IO, LS and CP lines at 1, 2 and 4 percent" width="1400" height="1000" loading="lazy">
+            <span class="cap">Pushover curve with IO, LS and CP drift levels (OpenSees)</span>
+          </button>
+          <button class="zoom" type="button" data-caption="ETABS 3D model of the three-story RC moment frame building">
+            <img src="images/seismic-etabs-3d.jpg" alt="ETABS 3D model of a three-story reinforced concrete frame building on a 3 by 3 column grid" width="736" height="699" loading="lazy">
+            <span class="cap">ETABS 3D model</span>
+          </button>
+          <button class="zoom" type="button" data-caption="2D frame used for the OpenSees pushover analysis, with node numbers">
+            <img src="images/seismic-opensees-frame.jpg" alt="Elevation of the 2D frame used in OpenSees, three columns and three stories with numbered nodes" width="900" height="960" loading="lazy">
+            <span class="cap">2D frame for pushover (OpenSees)</span>
+          </button>
+        </div>
+      </div>
+
+      <details class="more">
+        <summary>Read more: design inputs and model details</summary>
+        <div class="more-body">
+          <div>
+            <h4>Design basis</h4>
+            <ul>
+              <li>3 stories at 15 ft; 3 × 3 column grid at 15 ft; 8 in slab as a rigid diaphragm</li>
+              <li>f′c = 4,000 psi, Grade 60 reinforcement</li>
+              <li>Superimposed dead load 45 psf, live load 40 psf (residential)</li>
+              <li>Louisiana site: S<sub>DS</sub> = 0.13g, S<sub>D1</sub> = 0.05g, Seismic Design Category B</li>
+              <li>Special RC moment frame: R = 8, Ω<sub>0</sub> = 3, C<sub>d</sub> = 5.5</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Members and ETABS results</h4>
+            <ul>
+              <li>Columns 24 × 24 in with 8-#8 bars; beams 12 × 24 in with 3-#8 top and bottom</li>
+              <li>Fundamental period 0.425 s in both X and Y (symmetric plan); torsional mode 0.334 s</li>
+              <li>Story drifts were far below the ASCE 7 limit; member sizes were governed by gravity loads, not seismic demand</li>
+            </ul>
+          </div>
+          <div>
+            <h4>OpenSees model and pushover</h4>
+            <ul>
+              <li>One 2D frame line: 3 columns, 3 stories, fixed bases</li>
+              <li>Fiber-section columns with confined core and unconfined cover concrete, and P-Δ effects</li>
+              <li>Gravity load applied first, then a first-mode (1 : 2 : 3) lateral load under displacement control at the roof</li>
+              <li>Peak strength at about 4 in roof displacement; analysis carried to about 15 in</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Limitations I noted</h4>
+            <ul>
+              <li>2D model, so out-of-plane and torsional effects are not included</li>
+              <li>Beams modeled as elastic</li>
+              <li>Monotonic loading only, so no cyclic degradation</li>
+              <li>Joint shear and bond-slip not modeled</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- Other projects -->
+    <div class="project-grid">
+
+      <article class="card" id="project-prestressed">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">2</span>
+          <div>
+            <h3>Horizontal Shear Design of Composite Prestressed Beams</h3>
+            <p class="meta">2026 · LSU, CE 4420 Principles of Prestressed Concrete · Individual project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>ACI 318-19</li><li>Hand calculations</li></ul>
+        <p>A design report on transferring horizontal shear between a precast prestressed girder and a cast-in-place topping slab, based on ACI 318-19 Section 16.4. It ends with a full worked design for a 40 ft simply supported composite beam: a PCI BT-28 bulb-tee girder with a 4 in topping and an intentionally roughened interface.</p>
+        <div>
+          <p class="label">My role</p>
+          <p>I did the calculations and wrote the report.</p>
+        </div>
+        <div>
+          <p class="label">Key results</p>
+          <table class="results">
+            <tbody>
+              <tr><th scope="row">Factored shear demand, V<sub>u</sub></th><td>64.0 kips</td></tr>
+              <tr><th scope="row">Interface ties (minimum governed)</th><td>#3 U @ 14 in</td></tr>
+              <tr><th scope="row">Design capacity, ϕV<sub>nh</sub></th><td>116.0 kips</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-figs one">
+          <button class="zoom" type="button" data-caption="Calculation page: minimum ties, spacing limits and capacity check (ACI 318-19 Section 16.4)">
+            <img src="images/prestressed-calc-check.png" data-full="images/prestressed-calc-page.png" alt="Calculation of the tie reinforcement ratio and the final capacity check of 116.0 kips against 64.0 kips" width="1079" height="599" loading="lazy">
+            <span class="cap">Calculation page: ties and capacity check</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="project-offshore">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">3</span>
+          <div>
+            <h3>Dynamic Analysis of an Offshore Structure Under Wind and Wave Loading</h3>
+            <p class="meta">2025 · LSU, Offshore Structures · Individual project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>MATLAB</li><li>Structural dynamics</li></ul>
+        <p>Dynamic analysis of a fixed-leg jacket platform in 50 m of water, modeled as a three-degree-of-freedom lumped-mass system. I generated turbulent wind from the Kaimal spectrum and irregular waves from the JONSWAP spectrum (H<sub>s</sub> = 6 m, T<sub>p</sub> = 12 s), computed wave forces on the legs and braces with the Morison equation, and solved the response in modal coordinates with the Newmark-beta method.</p>
+        <div>
+          <p class="label">My role</p>
+          <p>I wrote all the MATLAB code (wind and wave time series, Morison forces, modal analysis and the Newmark-beta solver) and the report.</p>
+        </div>
+        <div>
+          <p class="label">Key results</p>
+          <table class="results">
+            <tbody>
+              <tr><th scope="row">Natural frequencies</th><td>1.88, 5.58, 9.81 rad/s</td></tr>
+              <tr><th scope="row">Peak displacement, top mass (600 s)</th><td>≈ 6 mm</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card-figs">
+          <button class="zoom" type="button" data-caption="Wave elevation time series generated from the JONSWAP spectrum (Hs = 6 m, Tp = 12 s)">
+            <img src="images/offshore-wave-elevation.png" alt="Wave elevation time series over 600 seconds, ranging between about minus 3 and plus 3 meters" width="664" height="525" loading="lazy">
+            <span class="cap">JONSWAP wave elevation</span>
+          </button>
+          <button class="zoom" type="button" data-caption="Displacement time history at the top mass under combined wind and wave loading">
+            <img src="images/offshore-top-displacement.png" alt="Displacement time history of the top mass over 600 seconds, peaking near 6 millimeters" width="639" height="525" loading="lazy">
+            <span class="cap">Top-mass displacement</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="project-sulfate">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">4</span>
+          <div>
+            <h3>Sulfate Ion Transport in C-S-H Nanopores: Effects of Temperature and Ca/Si Ratio</h3>
+            <p class="meta">2026 · LSU, CHE 7530 · Individual project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>Molecular dynamics</li><li>INTERFACE force field</li><li>Durability</li></ul>
+        <p>Sulfate attack is a major durability problem for concrete in marine, underground and industrial settings, and calcium leaching from C-S-H is an early step. I built C-S-H models from 11 Å tobermorite at Ca/Si ratios of 1.0 and 1.3, placed a 1 mol/L Na<sub>2</sub>SO<sub>4</sub> solution in a 3 nm pore above the surface, and ran 15 ns simulations at 300, 330 and 360 K.</p>
+        <div>
+          <p class="label">My role</p>
+          <p>Course project advised by Dr. Yaxin An. I built the models, ran the simulations, did the density-profile, calcium-leaching and radial distribution function analysis, and presented the results.</p>
+        </div>
+        <div>
+          <p class="label">Key results</p>
+          <p>Only a few calcium ions dissolved, with no clear trend between 300 and 360 K; Ca/Si = 1.3 generally released more than 1.0. Most calcium stayed bonded to C-S-H oxygen, and exposed calcium associated more strongly with sulfate than with water. The 15 ns window is short, so long-term leaching is not fully captured.</p>
+        </div>
+        <div class="card-figs three">
+          <button class="zoom" type="button" data-caption="Simulation setup: Na2SO4 solution above the C-S-H slab (Ca/Si = 1.0)">
+            <img src="images/sulfate-md-setup.jpg" alt="Molecular model with a water and ion layer above a layered C-S-H slab" width="394" height="662" loading="lazy">
+            <span class="cap">Model setup</span>
+          </button>
+          <button class="zoom" type="button" data-caption="Mean number of dissolved calcium ions vs. temperature for Ca/Si = 1.0 and 1.3">
+            <img src="images/sulfate-ca-leaching.png" alt="Plot of mean dissolved calcium count against temperature for two Ca/Si ratios, values between 0 and 5" width="1100" height="751" loading="lazy">
+            <span class="cap">Calcium leaching</span>
+          </button>
+          <button class="zoom" type="button" data-caption="Radial distribution functions of calcium with C-S-H oxygen, water oxygen and sulfate oxygen (Ca/Si = 1.0, 300 K)">
+            <img src="images/sulfate-rdf.png" alt="Radial distribution function plot with a dominant Ca to C-S-H oxygen peak near 2.6 angstrom" width="1200" height="778" loading="lazy">
+            <span class="cap">Calcium RDF</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="project-scour">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">5</span>
+          <div>
+            <h3>Bridge Scour Monitoring and Inspection Review</h3>
+            <p class="meta">2025 · LSU, Advanced Bridge Engineering · Individual project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>Literature review</li><li>Bridge scour</li></ul>
+        <p>A review of how scour develops around bridge piers and how it is monitored: diver inspection, magnetic sliding collars, float-out devices, smart rocks, sonar and vibration-based methods. The second half looks closely at piezoelectric sensors, including rod sensors, distributed scour nets and energy-harvesting devices.</p>
+        <div>
+          <p class="label">My role</p>
+          <p>I researched the sources and wrote the review.</p>
+        </div>
+        <div>
+          <p class="label">Main takeaway</p>
+          <p>Piezoelectric sensors can give continuous, self-powered scour readings during floods, when sonar struggles with turbid water. They still need better durability, clearer signal processing and long-term field validation before wide use.</p>
+        </div>
+      </article>
+
+      <article class="card" id="project-pavement">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">6</span>
+          <div>
+            <h3>Pavement Response to Vehicular Overloading</h3>
+            <p class="meta">2022 – 2023 · Pulchowk Campus, Tribhuvan University · Group project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>Abaqus FEA</li><li>IITPAVE</li></ul>
+        <p>Our group studied how overloaded trucks damage roads in Nepal, under the supervision of Dr. Pradeep Kumar Shrestha. The project had three parts: pavement design, finite element analysis and damage analysis.</p>
+        <div>
+          <p class="label">My role</p>
+          <p>I modeled the pavement system in Abaqus and ran the analyses: a 1.5 × 1.2 × 1.41 m block with asphalt, base, subbase and subgrade layers under a 0.758 MPa tire pressure. I ran elastic and viscoelastic models, single-wheel loads at different speeds and a double-wheel load at 20 km/h.</p>
+        </div>
+        <div>
+          <p class="label">Key result</p>
+          <p>Under static load, the Abaqus model matched IITPAVE within 2–6% for surface displacement, vertical compressive stress and horizontal tensile strain at 0.11 m depth.</p>
+        </div>
+        <div class="card-figs one">
+          <button class="zoom" type="button" data-caption="Abaqus model of the four-layer pavement with the tire load patch">
+            <img src="images/pavement-abaqus-model.jpg" alt="Abaqus 3D model of a four-layer pavement block with boundary conditions and a loaded patch on top" width="928" height="664" loading="lazy">
+            <span class="cap">Abaqus pavement model</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="project-survey">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">7</span>
+          <div>
+            <h3>Bridge Approach Survey, Roadway and Drainage Design</h3>
+            <p class="meta">2022 · Tribhuvan University survey camp · Group project</p>
+          </div>
+        </div>
+        <ul class="chips"><li>Total Station</li><li>Civil 3D</li></ul>
+        <p>Total Station survey to develop base mapping and terrain surfaces, followed by roadway geometry and drainage design for a bridge approach in Civil 3D, with quantity takeoffs and a cost estimate.</p>
+        <div class="card-figs one">
+          <button class="zoom" type="button" data-caption="Topographic map from the survey camp, 1:500">
+            <img src="images/survey-topo-map.png" alt="Topographic map at 1:500 scale with contours, buildings and traverse stations" width="1500" height="1287" loading="lazy">
+            <span class="cap">Topographic map, 1:500</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="card" id="project-residential">
+        <div class="card-head">
+          <span class="bubble" aria-hidden="true">8</span>
+          <div>
+            <h3>Residential Building Drawing Set and Cost Estimation</h3>
+            <p class="meta">2021 · Tribhuvan University</p>
+          </div>
+        </div>
+        <ul class="chips"><li>AutoCAD</li><li>Excel</li></ul>
+        <p>Plans, elevations, sections, location plan and 3D visualization of a residential building, with a quantity takeoff and cost estimate of a typical floor.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Research -->
+<section id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Research</h2>
+      <p>My M.S. research is on concrete materials, in Dr. Yen-Fang Su's group at LSU, with Dr. Yaxin An (LSU Chemical Engineering) as co-advisor for the molecular dynamics work.</p>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="block">
+          <h3>Areas</h3>
+          <ul>
+            <li>UHPC and self-sensing concrete characterization</li>
+            <li>Early-age rheology of underwater-printable mortars and underwater 3D concrete printing</li>
+            <li>Molecular dynamics of polymer–C-S-H interfaces</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>M.S. thesis</h3>
+          <p>Compatibility of Polymeric Admixtures in Underwater Concrete Additive Manufacturing: A Combined Molecular Dynamics and Experimental Study</p>
+        </div>
+
+        <div class="block">
+          <h3>Publications</h3>
+          <ul class="pubs">
+            <li>
+              <span class="status">Published · Soft Matter, 2025</span>
+              Wang, T., Nag, S., Patel, R., <strong>Timilsina, S.</strong>, Bharti, B., Su, Y.-F., and An, Y. “Salt-Responsive Behaviors of PVBTACl, NaPSS, and Their Complex by Molecular Dynamics Simulations and Experiments.” <em>Soft Matter</em>, 21(37), 7333–7343, 2025.
+              <a href="https://doi.org/10.1039/D5SM00282F" target="_blank" rel="noopener">doi.org/10.1039/D5SM00282F</a>
+            </li>
+            <li>
+              <span class="status">In review · SEM Proceedings, 2026</span>
+              Pasbani, M., <strong>Timilsina, S.</strong>, Su, Y.-F., Okeil, A., An, Y., and Jeong, H. “Characterization Framework for Underwater Printable Concrete: Modified Testing Methods with Environmental Simulation.”
+            </li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Posters and service</h3>
+          <ul>
+            <li>ACI Concrete Convention, Atlanta, GA, 2026: “Toward the Molecular Design of Anti-Washout Admixtures for Underwater Concrete: A Molecular Dynamics Study”</li>
+            <li>14th Annual LSU Graduate Student Research Conference, 2026: “Molecular Dynamics Study of Polymer Adsorption on Calcium Silicate Hydrate”</li>
+            <li>Organizing Committee, APTEC Gulf Coast Polymer Conference (May 2026 – present)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="photo-row">
+          <button class="zoom" type="button" data-caption="UHPC bond strength testing">
+            <img src="images/uhpc-bond-test.jpg" alt="Concrete block with steel test dollies and a removed core after a bond strength test" width="900" height="864" loading="lazy">
+            <span class="cap">UHPC bond strength test</span>
+          </button>
+          <button class="zoom" type="button" data-caption="UHPC tensile test setup">
+            <img src="images/uhpc-tensile-test.jpg" alt="UHPC specimen gripped in a loading frame for a tensile test" width="900" height="832" loading="lazy">
+            <span class="cap">UHPC tensile test setup</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Experience</h2>
+    </div>
+    <div class="timeline">
+      <div class="job">
+        <p class="when">Jan 2025 – present</p>
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <p class="org">Louisiana State University, Baton Rouge, LA</p>
+          <ul>
+            <li>Test UHPC in compression, tension, bond and cylinder splitting.</li>
+            <li>Test underwater concrete mixtures for washout resistance, rheology, permeability, setting time and strength.</li>
+            <li>Run molecular dynamics simulations of polymer interactions with cement hydration products (C-S-H).</li>
+            <li>Write technical reports and journal papers.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <p class="when">Jan – May 2025</p>
+        <div>
+          <h3>Graduate Teaching Assistant</h3>
+          <p class="org">Louisiana State University · CE 3400 Mechanics of Materials</p>
+        </div>
+      </div>
+      <div class="job">
+        <p class="when">Apr – Jul 2024</p>
+        <div>
+          <h3>Research Assistant</h3>
+          <p class="org">Pulchowk Campus, Tribhuvan University, Nepal</p>
+          <ul>
+            <li>Designed and tested porous-concrete mixes for compressive strength, UPV and permeability.</li>
+            <li>Built a MATLAB workflow linking pore structure to measured performance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education & Licenses -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Education and licenses</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu">
+        <p class="meta">Jan 2025 – Dec 2026 (expected)</p>
+        <h3>Master's in Civil Engineering (Structural)</h3>
+        <p>Louisiana State University · GPA <span class="mono">4.14 / 4.30</span></p>
+        <p class="course">Advanced Concrete Theory, Prestressed Concrete, Structural Dynamics (in progress), Advanced Mechanics of Materials, Advanced Bridge Engineering, Offshore Structures, Statistical Techniques</p>
+      </div>
+      <div class="edu">
+        <p class="meta">2018 – 2023</p>
+        <h3>Bachelor's in Civil Engineering</h3>
+        <p>Institute of Engineering, Pulchowk Campus, Tribhuvan University, Nepal</p>
+        <p class="course">Design of RCC Structures, Design of Steel and Timber Structures, Design of Bridge, Theory of Structures, Indeterminate Structures, Soil Mechanics, Foundation Engineering, Engineering Geology I &amp; II, Surveying I &amp; II, Hydraulics</p>
+        <p style="font-size:0.92rem">Full-tuition merit scholarship. Ranked 158 of about 14,000 in Nepal's national engineering entrance exam (2018).</p>
+        <div>
+          <p class="label">Activities</p>
+          <ul class="small-list">
+            <li>Organizing committee member for the FLOATcrete competition at AADHAR, the campus civil engineering exhibition. Teams designed high-strength concrete cubes that float on water.</li>
+            <li>Led a student team that cast bamboo-reinforced concrete beams as a low-cost alternative to steel for rural non-residential buildings (13th Civil Engineering Exhibition).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="licenses">
+      <div class="license">
+        <span class="badge">EIT</span>
+        <div>
+          <p><strong>Engineer-in-Training</strong></p>
+          <p class="muted">Maryland State Board for Professional Engineers · Oct 2026</p>
+        </div>
+      </div>
+      <div class="license">
+        <span class="badge">NEC</span>
+        <div>
+          <p><strong>Registered Civil Engineer</strong></p>
+          <p class="muted">Nepal Engineering Council · Dec 2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Skills</h2>
+    </div>
+    <div class="skills">
+      <div class="skill"><h3>Analysis and design</h3><p>ETABS, SAP2000, STAAD.Pro, OpenSees, Abaqus (FEA)</p></div>
+      <div class="skill"><h3>Codes</h3><p>ACI 318, ASCE 7, ASCE 41, AASHTO LRFD</p></div>
+      <div class="skill"><h3>CAD and BIM</h3><p>AutoCAD, Civil 3D, Revit (basic)</p></div>
+      <div class="skill"><h3>Survey and GIS</h3><p>Total Station, QGIS</p></div>
+      <div class="skill"><h3>Testing</h3><p>Compressive, tensile, bond, UPV, permeability, rheology, setting time; soils lab tests from coursework</p></div>
+      <div class="skill"><h3>Software and programming</h3><p>Python, MATLAB, Excel, LaTeX, Word, PowerPoint</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>I'm glad to talk about any of these projects or open roles.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-item"><p class="label">Email</p><a href="mailto:sabittimilsina@gmail.com">sabittimilsina@gmail.com</a></div>
+      <div class="contact-item"><p class="label">Phone</p><a href="tel:+12252209884">(225) 220-9884</a></div>
+      <div class="contact-item"><p class="label">LinkedIn</p><a href="https://www.linkedin.com/in/sabittimilsina" target="_blank" rel="noopener">linkedin.com/in/sabittimilsina</a></div>
+      <div class="contact-item"><p class="label">Location</p><span>Baton Rouge, LA · open to relocation</span></div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-row">
+    <span>Sabit Timilsina, E.I.T.</span>
+    <span>Baton Rouge, LA</span>
+    <span>Last updated Nov 2026</span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Enlarged figure">
+  <button class="lb-close" id="lb-close" type="button">Close</button>
+  <figure>
+    <img id="lb-img" src="data:," alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+</div>
+
+<script>
+(function () {
+  // Mobile menu
+  var header = document.querySelector('.site-header');
+  var toggle = document.getElementById('nav-toggle');
+  toggle.addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#site-nav a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      header.classList.remove('nav-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Figure lightbox
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-cap');
+  var lbClose = document.getElementById('lb-close');
+  var lastBtn = null;
+  function openLb(btn) {
+    var img = btn.querySelector('img');
+    lbImg.src = img.getAttribute('data-full') || img.getAttribute('src');
+    lbImg.alt = img.alt;
+    lbCap.textContent = btn.getAttribute('data-caption') || '';
+    lb.hidden = false;
+    document.body.classList.add('noscroll');
+    lastBtn = btn;
+    lbClose.focus();
+  }
+  function closeLb() {
+    lb.hidden = true;
+    document.body.classList.remove('noscroll');
+    if (lastBtn) lastBtn.focus();
+  }
+  document.querySelectorAll('.zoom').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLb(btn); });
+  });
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !lb.hidden) closeLb(); });
+
+  // Highlight the current section in the menu
+  if ('IntersectionObserver' in window) {
+    var links = {};
+    document.querySelectorAll('#site-nav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting && links[en.target.id]) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('active'); });
+          links[en.target.id].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
