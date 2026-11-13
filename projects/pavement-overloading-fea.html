@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pavement response to overloaded trucks | Sabit Timilsina</title>
+<meta name="description" content="A group project in Nepal on pavement damage from overloaded trucks. My part was the Abaqus model and the analyses.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pavement response to overloaded trucks | Sabit Timilsina">
+<meta property="og:description" content="A group project in Nepal on pavement damage from overloaded trucks. My part was the Abaqus model and the analyses.">
+<meta property="og:url" content="https://sabittimilsina.github.io/projects/pavement-overloading-fea.html">
+<meta property="og:image" content="https://sabittimilsina.github.io/images/og-image.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <a class="site-name" href="../index.html">Sabit Timilsina</a>
+    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../resume.pdf">CV</a></nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+<div class="page-head">
+<p class="meta"><a href="../projects.html">&larr; All projects</a></p>
+<h1>Pavement response to overloaded trucks</h1>
+<p class="meta">2022 to 2023. Group project, Pulchowk Campus, Tribhuvan University, supervised by Dr. Pradeep Kumar Shrestha. I did the Abaqus modeling and analysis.</p>
+<p class="meta">Abaqus, IITPAVE.</p>
+<p class="links"><a href="../docs/pavement-overloading-fea-slides.pdf">Project slides (PDF)</a> <span class="meta">(289 KB)</span></p>
+</div>
+
+<p>Overloaded trucks are common on Nepal's roads and wear them out quickly. Our group looked at how much damage overloading causes, using pavement design, finite element analysis and a damage analysis.</p>
+<p>My part was the finite element work. I built a 1.5 x 1.2 x 1.41 m pavement block in Abaqus with asphalt, base, subbase and subgrade layers, and applied the tire load as a 0.758 MPa pressure over a 0.600 x 0.416 m area.</p>
+<figure><a href="../images/pavement-abaqus-model.jpg"><img src="../images/pavement-abaqus-model.jpg" alt="Abaqus model of a four-layer pavement block" loading="lazy"></a><figcaption>The pavement model in Abaqus.</figcaption></figure>
+<p>Before using the model, I checked a static version against IITPAVE. The displacement, vertical stress and horizontal strain at 0.11 m depth were within 2 to 6% of IITPAVE. After that I ran elastic and viscoelastic models, single-wheel loads at different speeds, and a double-wheel load at 20 km/h.</p>
+<figure><a href="../images/pavement-validated-model.jpg"><img src="../images/pavement-validated-model.jpg" alt="Abaqus model used for validation" loading="lazy"></a><figcaption>Static model used for the IITPAVE check.</figcaption></figure>
+
+<div class="pager"><a href="bridge-scour-monitoring.html">&larr; Bridge scour monitoring and inspection review</a><a href="bridge-approach-survey.html">Bridge approach survey, road and drainage design &rarr;</a></div>
+  </div>
+</main>
+<footer>
+  <div class="container">Sabit Timilsina &middot; Baton Rouge, LA &middot; Last updated November 2026</div>
+</footer>
+</body>
+</html>

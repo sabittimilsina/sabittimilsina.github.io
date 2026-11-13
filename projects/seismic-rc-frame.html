@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seismic design and pushover analysis of a 3-story RC moment frame | Sabit Timilsina</title>
+<meta name="description" content="I designed a three-story concrete building with special moment frames in ETABS, then ran a pushover analysis in OpenSees to see how it behaves past the design loads.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Seismic design and pushover analysis of a 3-story RC moment frame | Sabit Timilsina">
+<meta property="og:description" content="I designed a three-story concrete building with special moment frames in ETABS, then ran a pushover analysis in OpenSees to see how it behaves past the design loads.">
+<meta property="og:url" content="https://sabittimilsina.github.io/projects/seismic-rc-frame.html">
+<meta property="og:image" content="https://sabittimilsina.github.io/images/og-image.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <a class="site-name" href="../index.html">Sabit Timilsina</a>
+    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../resume.pdf">CV</a></nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+<div class="page-head">
+<p class="meta"><a href="../projects.html">&larr; All projects</a></p>
+<h1>Seismic design and pushover analysis of a 3-story RC moment frame</h1>
+<p class="meta">2025. Course project, CE 7409 Advanced Concrete Theory, LSU. Individual work.</p>
+<p class="meta">ETABS, OpenSees. ASCE 7-22, ACI 318-19, ASCE 41.</p>
+
+</div>
+
+<p>For this project I designed a three-story reinforced concrete building with special moment frames in both directions. The plan is 30 ft by 30 ft with 15 ft bays, and each story is 15 ft tall. I designed it in ETABS for a Louisiana site using the equivalent lateral force procedure in ASCE 7-22, and checked the ACI 318-19 rules for special moment frames, including strong-column weak-beam, minimum reinforcement and confinement.</p>
+<p>Louisiana has low seismic demand, so the design forces were small. The design base shear from ETABS was 12.37 kips, the first two modes were at 0.425 s (one in each direction), and the elastic story drifts were under 0.01%. The member sizes ended up being set by gravity loads and minimum special moment frame dimensions more than by the earthquake loads.</p>
+<figure><a href="../images/seismic-etabs-3d.jpg"><img src="../images/seismic-etabs-3d.jpg" alt="ETABS 3D model of a three-story concrete frame" loading="lazy"></a><figcaption>ETABS model of the building.</figcaption></figure>
+<div class="table-wrap"><table>
+<thead><tr><th>Design data</th><th></th></tr></thead>
+<tbody>
+<tr><td>Materials</td><td>f'c = 4,000 psi, Grade 60 steel</td></tr>
+<tr><td>Loads</td><td>Superimposed dead 45 psf, live 40 psf</td></tr>
+<tr><td>Seismic</td><td>S<sub>DS</sub> = 0.13g, S<sub>D1</sub> = 0.05g, SDC B, R = 8, &Omega;<sub>0</sub> = 3, C<sub>d</sub> = 5.5</td></tr>
+<tr><td>Columns</td><td>24 x 24 in, 8-#8 bars</td></tr>
+<tr><td>Beams</td><td>12 x 24 in, 3-#8 top and bottom</td></tr>
+<tr><td>Slab</td><td>8 in, rigid diaphragm</td></tr>
+</tbody></table></div>
+<p>I wanted to see how much the frame could really take, so I built a 2D model of one frame line in OpenSees. The columns were fiber sections with confined core concrete, unconfined cover and P-delta effects, and the beams were kept elastic. I applied the gravity load first and then pushed the frame with a 1:2:3 lateral load pattern under displacement control at the roof.</p>
+<figure><a href="../images/seismic-pushover-drift.png"><img src="../images/seismic-pushover-drift.png" alt="Pushover curve of base shear against maximum interstory drift" loading="lazy"></a><figcaption>Pushover curve with the 1%, 2% and 4% drift levels marked.</figcaption></figure>
+<p>The frame reached a peak base shear of about 172 kips at around 4 in of roof displacement and then lost strength slowly. At 7% maximum interstory drift it was still carrying about 125 kips. At the drift levels used for Immediate Occupancy, Life Safety and Collapse Prevention (1%, 2% and 4%), the base shear was about 170, 160 and 143 kips.</p>
+<p>The study has limits. The model is 2D, the beams are elastic so all the nonlinearity is in the columns, the loading is monotonic, and joint shear and bond-slip are not modeled.</p>
+<h3>Other figures</h3>
+<div class="fig-grid"><figure><a href="../images/seismic-capacity-curve.png"><img src="../images/seismic-capacity-curve.png" alt="Capacity curve" loading="lazy"></a><figcaption>Base shear vs. roof displacement.</figcaption></figure><figure><a href="../images/seismic-etabs-plan.png"><img src="../images/seismic-etabs-plan.png" alt="Plan view of the column grid" loading="lazy"></a><figcaption>Plan view, 3 x 3 grid.</figcaption></figure><figure><a href="../images/seismic-story-drift.png"><img src="../images/seismic-story-drift.png" alt="Story drift plot" loading="lazy"></a><figcaption>Story drifts from ETABS.</figcaption></figure><figure><a href="../images/seismic-opensees-frame.jpg"><img src="../images/seismic-opensees-frame.jpg" alt="Frame elevation with node numbers" loading="lazy"></a><figcaption>2D frame used in OpenSees.</figcaption></figure></div>
+
+<div class="pager"><span></span><a href="horizontal-shear-composite-beams.html">Horizontal shear design of composite prestressed beams &rarr;</a></div>
+  </div>
+</main>
+<footer>
+  <div class="container">Sabit Timilsina &middot; Baton Rouge, LA &middot; Last updated November 2026</div>
+</footer>
+</body>
+</html>

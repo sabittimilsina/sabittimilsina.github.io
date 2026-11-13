@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dynamic analysis of an offshore platform under wind and wave loading | Sabit Timilsina</title>
+<meta name="description" content="I wrote MATLAB code to generate random wind and wave loads on a jacket platform and solve its dynamic response.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dynamic analysis of an offshore platform under wind and wave loading | Sabit Timilsina">
+<meta property="og:description" content="I wrote MATLAB code to generate random wind and wave loads on a jacket platform and solve its dynamic response.">
+<meta property="og:url" content="https://sabittimilsina.github.io/projects/offshore-dynamic-analysis.html">
+<meta property="og:image" content="https://sabittimilsina.github.io/images/og-image.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <a class="site-name" href="../index.html">Sabit Timilsina</a>
+    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../resume.pdf">CV</a></nav>
+  </div>
+</header>
+<main>
+  <div class="container">
+<div class="page-head">
+<p class="meta"><a href="../projects.html">&larr; All projects</a></p>
+<h1>Dynamic analysis of an offshore platform under wind and wave loading</h1>
+<p class="meta">2025. Final project, Offshore Structures, LSU. Individual work.</p>
+<p class="meta">MATLAB.</p>
+<p class="links"><a href="../docs/offshore-dynamic-analysis-report.pdf">Report with MATLAB code (PDF)</a> <span class="meta">(1.2 MB)</span></p>
+</div>
+
+<p>For my offshore structures class I analyzed a fixed jacket platform in 50 m of water under random wind and waves. The platform was given as a three-mass model, so most of the work was generating the loads and solving the dynamics. I wrote all of it in MATLAB.</p>
+<p>For the wind, I used a log profile with 15 m/s at 90 m and generated turbulence from the Kaimal spectrum. For the waves, I generated an irregular sea from the JONSWAP spectrum with a 6 m significant wave height and a 12 s peak period. I got the water particle velocity and acceleration from linear wave theory and computed the forces on the legs and braces with the Morison equation.</p>
+<figure><a href="../images/offshore-wave-elevation.png"><img src="../images/offshore-wave-elevation.png" alt="Wave elevation time series" loading="lazy"></a><figcaption>Wave elevation generated from the JONSWAP spectrum.</figcaption></figure>
+<p>Then I set up the equations of motion, did a modal analysis (natural frequencies of 1.88, 5.58 and 9.82 rad/s), and solved the response with the Newmark-beta method in modal coordinates. Over the 600 s record, the wave force at the lowest mass went up to about 350 kN, and the top of the platform moved about 6 mm at most.</p>
+<figure><a href="../images/offshore-top-displacement.png"><img src="../images/offshore-top-displacement.png" alt="Displacement time history of the top mass" loading="lazy"></a><figcaption>Displacement of the top mass.</figcaption></figure>
+<h3>Other figures</h3>
+<div class="fig-grid"><figure><a href="../images/offshore-jonswap.png"><img src="../images/offshore-jonswap.png" alt="JONSWAP spectrum plot" loading="lazy"></a><figcaption>JONSWAP spectrum.</figcaption></figure><figure><a href="../images/offshore-wind-velocity.png"><img src="../images/offshore-wind-velocity.png" alt="Wind velocity time series" loading="lazy"></a><figcaption>Wind velocity at two heights.</figcaption></figure><figure><a href="../images/offshore-wind-force.png"><img src="../images/offshore-wind-force.png" alt="Wind force time series" loading="lazy"></a><figcaption>Wind force on the upper masses.</figcaption></figure><figure><a href="../images/offshore-wave-force.png"><img src="../images/offshore-wave-force.png" alt="Wave force time series" loading="lazy"></a><figcaption>Wave force at the lowest mass.</figcaption></figure></div>
+
+<div class="pager"><a href="horizontal-shear-composite-beams.html">&larr; Horizontal shear design of composite prestressed beams</a><a href="sulfate-ion-transport-csh.html">Sulfate ion transport in C-S-H nanopores &rarr;</a></div>
+  </div>
+</main>
+<footer>
+  <div class="container">Sabit Timilsina &middot; Baton Rouge, LA &middot; Last updated November 2026</div>
+</footer>
+</body>
+</html>
