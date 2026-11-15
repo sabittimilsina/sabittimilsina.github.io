@@ -34,7 +34,7 @@ li { margin-bottom: 0.35em; }
 .page-head .links { margin-bottom: 0; }
 
 /* Home (About) */
-.photo { float: right; width: 190px; margin: 6px 0 16px 28px; border-radius: 4px; }
+.photo { float: right; width: 240px; margin: 6px 0 16px 28px; border-radius: 4px; }
 .news { list-style: none; padding: 0; }
 .news li { display: grid; grid-template-columns: 6.5em 1fr; gap: 12px; margin-bottom: 0.45em; }
 .news .date { color: #666; }
@@ -90,6 +90,6 @@ footer .container { padding-top: 16px; padding-bottom: 24px; }
   .fig-grid { grid-template-columns: 1fr 1fr; }
   .intro { flex-direction: column-reverse; }
   h1 { font-size: 1.6rem; }
-  .photo { width: 130px; margin-left: 16px; }
+  .photo { float: none; display: block; width: 220px; margin: 0 0 18px 0; }
   .news li { grid-template-columns: 1fr; gap: 0; }
 }
