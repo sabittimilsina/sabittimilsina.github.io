@@ -13,13 +13,14 @@
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <div class="container">
     <a class="site-name" href="../index.html">Sabit Timilsina</a>
-    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">CV</a></nav>
+    <nav aria-label="Main navigation"><a href="../index.html">About</a> <a href="../projects.html" class="current" aria-current="page">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">R&eacute;sum&eacute;</a></nav>
   </div>
 </header>
-<main>
+<main id="main-content">
   <div class="container">
 <div class="page-head">
 <p class="meta"><a href="../projects.html">&larr; All projects</a></p>
@@ -29,13 +30,13 @@
 <p class="links"><a href="../docs/sulfate-ion-transport-csh-slides.pdf">Slides (PDF)</a> <span class="meta">(4.7 MB)</span></p>
 </div>
 
-<p>Sulfate attack is one of the main durability problems for concrete in marine, underground and industrial settings, and calcium leaching from C-S-H is part of how it starts. For this project I wanted to look at that process at the molecular level.</p>
-<p>I built C-S-H models from 11 &Aring; tobermorite at Ca/Si ratios of 1.0 and 1.3 and put a 1 mol/L sodium sulfate solution in a pore about 3 nm wide above the surface. I used the INTERFACE force field for C-S-H, CHARMM parameters for the ions and TIP3P water, and ran 15 ns at 300, 330 and 360 K.</p>
+<p>This molecular dynamics project investigated calcium leaching from C-S-H exposed to sodium sulfate solution, a process relevant to concrete durability in sulfate-bearing environments.</p>
+<p>I constructed C-S-H models from 11 &Aring; tobermorite at Ca/Si ratios of 1.0 and 1.3, with a 1 mol/L sodium sulfate solution in a pore approximately 3 nm wide. Simulations used the INTERFACE force field for C-S-H, CHARMM ion parameters and TIP3P water, with 15 ns runs at 300, 330 and 360 K.</p>
 <figure><a href="../images/sulfate-md-setup.jpg"><img src="../images/sulfate-md-setup.jpg" alt="Molecular model with solution above a layered C-S-H slab" loading="lazy"></a><figcaption>Simulation box: sulfate solution above the C-S-H.</figcaption></figure>
-<p>Only a few calcium ions came off the surface, and in this time window there wasn't a clear trend with temperature. The Ca/Si 1.3 model usually lost a little more calcium than the 1.0 model. The radial distribution functions showed that most calcium stayed bonded to oxygen in the C-S-H, and where calcium was exposed it paired with sulfate more than with water.</p>
+<p>Only a small number of calcium ions left the surface during the simulated time window, and no clear temperature trend emerged. The Ca/Si 1.3 model generally showed slightly more calcium leaching than the Ca/Si 1.0 model. Radial distribution functions indicated that most calcium remained coordinated with C-S-H oxygen; exposed calcium showed stronger association with sulfate oxygen than with water oxygen.</p>
 <figure><a href="../images/sulfate-ca-leaching.png"><img src="../images/sulfate-ca-leaching.png" alt="Plot of dissolved calcium against temperature" loading="lazy"></a><figcaption>Average number of dissolved calcium ions at each temperature.</figcaption></figure>
-<p>15 ns is short, so this is more of a first look than a final answer. Longer runs and more Ca/Si ratios would be the next step.</p>
-<h3>Other figures</h3>
+<p>These observations are limited to the 15 ns simulations and the two Ca/Si ratios studied. Longer runs and a broader range of compositions would help assess whether the observed differences persist.</p>
+<h2>Additional figures</h2>
 <div class="fig-grid"><figure><a href="../images/sulfate-tobermorite.jpg"><img src="../images/sulfate-tobermorite.jpg" alt="Tobermorite crystal model" loading="lazy"></a><figcaption>Tobermorite supercell.</figcaption></figure><figure><a href="../images/sulfate-csh-model-a.jpg"><img src="../images/sulfate-csh-model-a.jpg" alt="C-S-H atomic model" loading="lazy"></a><figcaption>C-S-H model.</figcaption></figure><figure><a href="../images/sulfate-zdensity.png"><img src="../images/sulfate-zdensity.png" alt="Density profile plot" loading="lazy"></a><figcaption>Density profiles across the pore.</figcaption></figure><figure><a href="../images/sulfate-snapshot-start.jpg"><img src="../images/sulfate-snapshot-start.jpg" alt="Simulation snapshot at the start" loading="lazy"></a><figcaption>Start of a run.</figcaption></figure><figure><a href="../images/sulfate-snapshot-end.jpg"><img src="../images/sulfate-snapshot-end.jpg" alt="Simulation snapshot after 15 ns" loading="lazy"></a><figcaption>After 15 ns.</figcaption></figure><figure><a href="../images/sulfate-rdf.png"><img src="../images/sulfate-rdf.png" alt="RDF plot" loading="lazy"></a><figcaption>Radial distribution functions.</figcaption></figure></div>
 
 <div class="pager"><a href="offshore-dynamic-analysis.html">&larr; Dynamic analysis of an offshore platform under wind and wave loading</a><a href="bridge-scour-monitoring.html">Bridge scour monitoring and inspection review &rarr;</a></div>

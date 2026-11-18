@@ -13,13 +13,14 @@
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <div class="container">
     <a class="site-name" href="../index.html">Sabit Timilsina</a>
-    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">CV</a></nav>
+    <nav aria-label="Main navigation"><a href="../index.html">About</a> <a href="../projects.html" class="current" aria-current="page">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">R&eacute;sum&eacute;</a></nav>
   </div>
 </header>
-<main>
+<main id="main-content">
   <div class="container">
 <div class="page-head">
 <p class="meta"><a href="../projects.html">&larr; All projects</a></p>
@@ -29,10 +30,10 @@
 <p class="links"><a href="../docs/pavement-overloading-fea-slides.pdf">Project slides (PDF)</a> <span class="meta">(289 KB)</span></p>
 </div>
 
-<p>Overloaded trucks are common on Nepal's roads and wear them out quickly. Our group looked at how much damage overloading causes, using pavement design, finite element analysis and a damage analysis.</p>
-<p>My part was the finite element work. I built a 1.5 x 1.2 x 1.41 m pavement block in Abaqus with asphalt, base, subbase and subgrade layers, and applied the tire load as a 0.758 MPa pressure over a 0.600 x 0.416 m area.</p>
+<p>Our group investigated pavement response to truck overloading in Nepal using pavement design calculations, finite element modeling and damage analysis. I was responsible for the Abaqus modeling and analysis.</p>
+<p>I built a 1.5 x 1.2 x 1.41 m layered pavement model in Abaqus, representing asphalt, base, subbase and subgrade. The tire load was applied as a 0.758 MPa pressure over a 0.600 x 0.416 m contact area.</p>
 <figure><a href="../images/pavement-abaqus-model.jpg"><img src="../images/pavement-abaqus-model.jpg" alt="Abaqus model of a four-layer pavement block" loading="lazy"></a><figcaption>The pavement model in Abaqus.</figcaption></figure>
-<p>Before using the model, I checked a static version against IITPAVE. The displacement, vertical stress and horizontal strain at 0.11 m depth were within 2 to 6% of IITPAVE. After that I ran elastic and viscoelastic models, single-wheel loads at different speeds, and a double-wheel load at 20 km/h.</p>
+<p>I checked the static model against IITPAVE: displacement, vertical stress and horizontal strain at 0.11 m depth differed by 2&ndash;6%. I then analyzed elastic and viscoelastic responses, single-wheel loads at different speeds, and a double-wheel load at 20 km/h.</p>
 <figure><a href="../images/pavement-validated-model.jpg"><img src="../images/pavement-validated-model.jpg" alt="Abaqus model used for validation" loading="lazy"></a><figcaption>Static model used for the IITPAVE check.</figcaption></figure>
 
 <div class="pager"><a href="bridge-scour-monitoring.html">&larr; Bridge scour monitoring and inspection review</a><a href="bridge-approach-survey.html">Topographic, bridge site and road alignment survey &rarr;</a></div>

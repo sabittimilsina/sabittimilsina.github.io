@@ -13,13 +13,14 @@
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <div class="container">
     <a class="site-name" href="../index.html">Sabit Timilsina</a>
-    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">CV</a></nav>
+    <nav aria-label="Main navigation"><a href="../index.html">About</a> <a href="../projects.html" class="current" aria-current="page">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">R&eacute;sum&eacute;</a></nav>
   </div>
 </header>
-<main>
+<main id="main-content">
   <div class="container">
 <div class="page-head">
 <p class="meta"><a href="../projects.html">&larr; All projects</a></p>
@@ -29,13 +30,13 @@
 <p class="links"><a href="../docs/offshore-dynamic-analysis-report.pdf">Report with MATLAB code (PDF)</a> <span class="meta">(1.2 MB)</span></p>
 </div>
 
-<p>For my offshore structures class I analyzed a fixed jacket platform in 50 m of water under random wind and waves. The platform was given as a three-mass model, so most of the work was generating the loads and solving the dynamics. I wrote all of it in MATLAB.</p>
+<p>I developed a MATLAB analysis of a fixed jacket platform in 50 m of water under random wind and wave loading. Using the three-mass model supplied in the course project, I generated environmental load histories and solved the platform's dynamic response.</p>
 <figure><a href="../images/offshore-platform-model.png"><img src="../images/offshore-platform-model.png" alt="Schematic of a three-level jacket platform with masses M1 to M3, a wave at the water line, and the leg layout in section A-A" loading="lazy"></a><figcaption>The jacket platform I analyzed, as given in the course project statement.</figcaption></figure>
-<p>For the wind, I used a log profile with 15 m/s at 90 m and generated turbulence from the Kaimal spectrum. For the waves, I generated an irregular sea from the JONSWAP spectrum with a 6 m significant wave height and a 12 s peak period. I got the water particle velocity and acceleration from linear wave theory and computed the forces on the legs and braces with the Morison equation.</p>
+<p>Wind loading used a logarithmic velocity profile with 15 m/s at 90 m and turbulence generated from the Kaimal spectrum. Wave loading used a JONSWAP spectrum with a 6 m significant wave height and a 12 s peak period. I calculated water particle velocities and accelerations using linear wave theory, then applied the Morison equation to obtain forces on the legs and braces.</p>
 <figure><a href="../images/offshore-wave-elevation.png"><img src="../images/offshore-wave-elevation.png" alt="Wave elevation time series" loading="lazy"></a><figcaption>Wave elevation generated from the JONSWAP spectrum.</figcaption></figure>
-<p>Then I set up the equations of motion, did a modal analysis (natural frequencies of 1.88, 5.58 and 9.82 rad/s), and solved the response with the Newmark-beta method in modal coordinates. Over the 600 s record, the wave force at the lowest mass went up to about 350 kN, and the top of the platform moved about 6 mm at most.</p>
+<p>I assembled the equations of motion, calculated natural frequencies of 1.88, 5.58 and 9.82 rad/s, and solved the response using the Newmark-beta method in modal coordinates. Over the 600 s simulation, the wave force at the lowest mass reached approximately 350 kN and the maximum top displacement was approximately 6 mm.</p>
 <figure><a href="../images/offshore-top-displacement.png"><img src="../images/offshore-top-displacement.png" alt="Displacement time history of the top mass" loading="lazy"></a><figcaption>Displacement of the top mass.</figcaption></figure>
-<h3>Other figures</h3>
+<h2>Additional figures</h2>
 <div class="fig-grid"><figure><a href="../images/offshore-jonswap.png"><img src="../images/offshore-jonswap.png" alt="JONSWAP spectrum plot" loading="lazy"></a><figcaption>JONSWAP spectrum.</figcaption></figure><figure><a href="../images/offshore-wind-velocity.png"><img src="../images/offshore-wind-velocity.png" alt="Wind velocity time series" loading="lazy"></a><figcaption>Wind velocity at two heights.</figcaption></figure><figure><a href="../images/offshore-wind-force.png"><img src="../images/offshore-wind-force.png" alt="Wind force time series" loading="lazy"></a><figcaption>Wind force on the upper masses.</figcaption></figure><figure><a href="../images/offshore-wave-force.png"><img src="../images/offshore-wave-force.png" alt="Wave force time series" loading="lazy"></a><figcaption>Wave force at the lowest mass.</figcaption></figure></div>
 
 <div class="pager"><a href="horizontal-shear-composite-beams.html">&larr; Horizontal shear design of composite prestressed beams</a><a href="sulfate-ion-transport-csh.html">Sulfate ion transport in C-S-H nanopores &rarr;</a></div>

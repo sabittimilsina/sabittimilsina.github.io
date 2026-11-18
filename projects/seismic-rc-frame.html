@@ -13,13 +13,14 @@
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header>
   <div class="container">
     <a class="site-name" href="../index.html">Sabit Timilsina</a>
-    <nav><a href="../index.html">About</a> <a href="../projects.html" class="current">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">CV</a></nav>
+    <nav aria-label="Main navigation"><a href="../index.html">About</a> <a href="../projects.html" class="current" aria-current="page">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">R&eacute;sum&eacute;</a></nav>
   </div>
 </header>
-<main>
+<main id="main-content">
   <div class="container">
 <div class="page-head">
 <p class="meta"><a href="../projects.html">&larr; All projects</a></p>
@@ -29,8 +30,8 @@
 
 </div>
 
-<p>For this project I designed a three-story reinforced concrete building with special moment frames in both directions. The plan is 30 ft by 30 ft with 15 ft bays, and each story is 15 ft tall. I designed it in ETABS for a Louisiana site using the equivalent lateral force procedure in ASCE 7-22, and checked the ACI 318-19 rules for special moment frames, including strong-column weak-beam, minimum reinforcement and confinement.</p>
-<p>Louisiana has low seismic demand, so the design forces were small. The design base shear from ETABS was 12.37 kips, the first two modes were at 0.425 s (one in each direction), and the elastic story drifts were under 0.01%. The member sizes ended up being set by gravity loads and minimum special moment frame dimensions more than by the earthquake loads.</p>
+<p>I designed a three-story reinforced concrete building with special moment frames in both directions using ETABS. The building has a 30 ft by 30 ft plan, 15 ft bays and 15 ft story heights. I applied the ASCE 7-22 equivalent lateral force procedure for a Louisiana site and checked ACI 318-19 requirements for special moment frames, including strong-column/weak-beam behavior, minimum reinforcement and confinement.</p>
+<p>For the selected site, seismic demand was low: the ETABS design base shear was 12.37 kips, the first two modal periods were 0.425 s, and elastic story drifts were below 0.01%. Gravity loads and minimum special moment frame dimensions governed member sizing more than seismic forces.</p>
 <figure><a href="../images/seismic-etabs-3d.jpg"><img src="../images/seismic-etabs-3d.jpg" alt="ETABS 3D model of a three-story concrete frame" loading="lazy"></a><figcaption>ETABS model of the building.</figcaption></figure>
 <div class="table-wrap"><table>
 <thead><tr><th>Design data</th><th></th></tr></thead>
@@ -42,11 +43,11 @@
 <tr><td>Beams</td><td>12 x 24 in, 3-#8 top and bottom</td></tr>
 <tr><td>Slab</td><td>8 in, rigid diaphragm</td></tr>
 </tbody></table></div>
-<p>I wanted to see how much the frame could really take, so I built a 2D model of one frame line in OpenSees. The columns were fiber sections with confined core concrete, unconfined cover and P-delta effects, and the beams were kept elastic. I applied the gravity load first and then pushed the frame with a 1:2:3 lateral load pattern under displacement control at the roof.</p>
+<p>To investigate nonlinear response, I built a simplified 2D OpenSees model of one frame line. Columns used fiber sections with confined core concrete, unconfined cover concrete and P-delta effects; beams remained elastic. After applying gravity loads, I performed a displacement-controlled pushover analysis with a 1:2:3 lateral load pattern.</p>
 <figure><a href="../images/seismic-pushover-drift.png"><img src="../images/seismic-pushover-drift.png" alt="Pushover curve of base shear against maximum interstory drift" loading="lazy"></a><figcaption>Pushover curve with the 1%, 2% and 4% drift levels marked.</figcaption></figure>
-<p>The frame reached a peak base shear of about 172 kips at around 4 in of roof displacement and then lost strength slowly. At 7% maximum interstory drift it was still carrying about 125 kips. At the drift levels used for Immediate Occupancy, Life Safety and Collapse Prevention (1%, 2% and 4%), the base shear was about 170, 160 and 143 kips.</p>
-<p>The study has limits. The model is 2D, the beams are elastic so all the nonlinearity is in the columns, the loading is monotonic, and joint shear and bond-slip are not modeled.</p>
-<h3>Other figures</h3>
+<p>The model reached a peak base shear of approximately 172 kips at 4 in of roof displacement, followed by gradual strength loss. It carried approximately 125 kips at 7% maximum interstory drift. Base shears at the study's 1%, 2% and 4% drift reference levels were approximately 170, 160 and 143 kips, respectively.</p>
+<p>The results apply to a simplified 2D model with elastic beams and column nonlinearity under monotonic loading. Joint shear and bond-slip were not modeled. The plotted drift levels are reference markers for this study; they do not establish ASCE 41 performance classifications.</p>
+<h2>Additional figures</h2>
 <div class="fig-grid"><figure><a href="../images/seismic-capacity-curve.png"><img src="../images/seismic-capacity-curve.png" alt="Capacity curve" loading="lazy"></a><figcaption>Base shear vs. roof displacement.</figcaption></figure><figure><a href="../images/seismic-etabs-plan.png"><img src="../images/seismic-etabs-plan.png" alt="Plan view of the column grid" loading="lazy"></a><figcaption>Plan view, 3 x 3 grid.</figcaption></figure><figure><a href="../images/seismic-story-drift.png"><img src="../images/seismic-story-drift.png" alt="Story drift plot" loading="lazy"></a><figcaption>Story drifts from ETABS.</figcaption></figure><figure><a href="../images/seismic-opensees-frame.jpg"><img src="../images/seismic-opensees-frame.jpg" alt="Frame elevation with node numbers" loading="lazy"></a><figcaption>2D frame used in OpenSees.</figcaption></figure></div>
 
 <div class="pager"><span></span><a href="horizontal-shear-composite-beams.html">Horizontal shear design of composite prestressed beams &rarr;</a></div>
