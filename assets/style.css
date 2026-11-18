@@ -108,3 +108,27 @@ figure video { display: block; width: 100%; max-width: 680px; margin: 0 auto; ba
   .photo-grid.two img { height: 240px; }
   nav a { margin-left: 10px; font-size: 0.95rem; }
 }
+
+/* Editorial review: navigation, focus visibility and small-screen readability. */
+* { box-sizing: border-box; }
+html { scroll-padding-top: 20px; }
+a:focus-visible { outline: 3px solid #0b5cad; outline-offset: 4px; }
+.skip-link { position: absolute; left: 16px; top: -80px; z-index: 10; padding: 8px 14px; background: white; }
+.skip-link:focus { top: 10px; }
+.section-nav { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 14px 0; margin: 1.3em 0; border-block: 1px solid #e3e3e3; }
+.section-nav a { margin: 0; color: #0b5cad; text-decoration: underline; }
+.fig-grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.experience-list h3 { margin-top: 1em; }
+.experience-list .meta { margin-bottom: .4em; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.links a { margin-right: 0; }
+.pager > * { min-width: 0; flex: 1; }
+.pager > :last-child { text-align: right; }
+@media (max-width: 480px) {
+  header nav { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+  header nav a { margin-left: 0; }
+  .fig-grid, .fig-grid.two, .photo-grid, .photo-grid.two { grid-template-columns: minmax(0, 1fr); }
+  .photo-grid img, .photo-grid.two img { height: auto; }
+  .pager { flex-direction: column; }
+  .pager > :last-child { text-align: left; }
+}
