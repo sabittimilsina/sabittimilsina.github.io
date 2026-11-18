@@ -99,9 +99,12 @@ footer .container { padding-top: 16px; padding-bottom: 24px; }
 .photo-grid figure { margin: 0; }
 .photo-grid img { width: 100%; height: 230px; object-fit: cover; object-position: center top; }
 .photo-grid figcaption { text-align: left; }
+.photo-grid.two { grid-template-columns: repeat(2, 1fr); max-width: 640px; }
+.photo-grid.two img { height: 380px; object-position: center; }
 figure video { display: block; width: 100%; max-width: 680px; margin: 0 auto; background: #000; border: 1px solid #ddd; }
 @media (max-width: 640px) {
   .photo-grid { grid-template-columns: 1fr 1fr; }
   .photo-grid img { height: 170px; }
+  .photo-grid.two img { height: 240px; }
   nav a { margin-left: 10px; font-size: 0.95rem; }
 }
