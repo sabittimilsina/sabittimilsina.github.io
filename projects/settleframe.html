@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moment redistribution in building frames due to consolidation settlement of footings | Sabit Timilsina</title>
+<meta name="description" content="I developed SettleFrame, a Python program with a web version that follows how consolidation settlement of footings changes the moments in a building frame over time.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moment redistribution in building frames due to consolidation settlement of footings | Sabit Timilsina">
+<meta property="og:description" content="I developed SettleFrame, a Python program with a web version that follows how consolidation settlement of footings changes the moments in a building frame over time.">
+<meta property="og:url" content="https://sabittimilsina.github.io/projects/settleframe.html">
+<meta property="og:image" content="https://sabittimilsina.github.io/images/og-image.jpg">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header>
+  <div class="container">
+    <a class="site-name" href="../index.html">Sabit Timilsina</a>
+    <nav aria-label="Main navigation"><a href="../index.html">About</a> <a href="../projects.html" class="current" aria-current="page">Projects</a> <a href="../research.html">Research</a> <a href="../leadership.html">Leadership</a> <a href="../resume.pdf">R&eacute;sum&eacute;</a></nav>
+  </div>
+</header>
+<main id="main-content">
+  <div class="container">
+<div class="page-head">
+<p class="meta"><a href="../projects.html">&larr; All projects</a></p>
+<h1>Moment redistribution in building frames due to consolidation settlement of footings</h1>
+<p class="meta">2026. Course project, CE 7405 Statically Indeterminate Structures, LSU. Individual work.</p>
+<p class="meta">Python (NumPy, Matplotlib, Tkinter, Streamlit), OpenSees.</p>
+<p class="links"><a href="https://settleframe-sabit.streamlit.app">Try the web app</a><a href="https://github.com/sabittimilsina/settleframe">Source code on GitHub</a></p>
+</div>
+
+<p>When we analyze an indeterminate frame in class, we usually assume the supports do not move. Footings on saturated clay keep settling for years after construction, and they rarely settle by the same amount. Because the frame is indeterminate, this uneven settlement puts extra moments into the beams and columns, and those moments keep changing as the clay consolidates. For this project I developed SettleFrame, a Python program that follows these moments over the life of a building.</p>
+<figure><a href="../images/settleframe-problem.svg"><img src="../images/settleframe-problem.svg" alt="Two-story, three-bay frame over four footings, with a thicker clay layer under the second footing and the settled shape of the frame" loading="lazy"></a><figcaption>The example frame. Footing F2 sits on thicker clay that drains only at the top. Settlements after 30 years, with the settled shape magnified.</figcaption></figure>
+<p>The frame is analyzed with the direct stiffness method. Dead load, live load and the effect of settlement are separate load cases, so they can be combined at any time. For the clay under each footing, the stress increase comes from the 2:1 method, the settlement from the e&ndash;log&nbsp;&sigma;&prime; relation with Cc, Cr, e0 and the overconsolidation ratio, and the rate from Terzaghi's one-dimensional consolidation equation, which I solve with finite differences in time.</p>
+<p>The frame and the soil are coupled. A footing that settles more than its neighbors sheds part of its load to them through the frame, and that slows its own settlement. I built a matrix of how the footing reactions change for a unit settlement of each footing, and at every time step I solve the settlements and footing loads together with Newton&ndash;Raphson iteration. Setting this matrix to zero gives the usual uncoupled analysis, where the footing loads never change.</p>
+<figure><a href="../images/settleframe-settlement.png"><img src="../images/settleframe-settlement.png" alt="Settlement of four footings over 30 years for the coupled and uncoupled analyses" loading="lazy"></a><figcaption>Settlement of each footing over 30 years. Solid lines are the coupled analysis and dashed lines are uncoupled.</figcaption></figure>
+<p>In the example, a three-bay, two-story RC frame, the footings on thin clay finish settling in about two years, while F2 keeps settling for decades. In the coupled analysis F2 loses about a third of its load, from 344 to 233 kN, and settles 16 mm after 30 years. The largest moment from settlement is 134 kN&middot;m and the largest angular distortion is 1/663, which is within the 1/500 limit. If the footing loads are held constant instead, F2 settles 30 mm, the moment reaches 403 kN&middot;m and the distortion is 1/237. For comparison, the largest dead-load moment in this frame is about 100 kN&middot;m.</p>
+<figure><a href="../images/settleframe-moments-coupled.png"><img src="../images/settleframe-moments-coupled.png" alt="Moment diagram on the frame caused by footing settlement at 30 years" loading="lazy"></a><figcaption>Moments from settlement at 30 years in the coupled analysis (kN&middot;m), drawn on the tension side.</figcaption></figure>
+<p>I checked the program against 29 hand calculations and closed-form solutions, including fixed-end and two-span beams with a settling support, a portal frame, and Terzaghi's consolidation curve, which the program follows within 0.24%. I also built the same frame in OpenSees and applied the 30-year settlements. The reactions and member-end moments matched at all 32 values I compared.</p>
+<p>The program has a desktop version and a web version. In the web version, anyone can change the frame, the footings and the clay, run the analysis, and move a time slider to see the moments at any time. I used it for a live demo in my class presentation.</p>
+<p>The model is 2D with gravity loads only, and the frame is linear elastic, so cracking and creep of the concrete, which would reduce these moments, are not included. Each footing sits on a single clay layer, and the footings do not affect each other's stresses.</p>
+<h2>Additional figures</h2>
+<div class="fig-grid"><figure><a href="../images/settleframe-footing-loads.png"><img src="../images/settleframe-footing-loads.png" alt="Sustained load on each footing over time" loading="lazy"></a><figcaption>Load on each footing over time.</figcaption></figure><figure><a href="../images/settleframe-moments-uncoupled.png"><img src="../images/settleframe-moments-uncoupled.png" alt="Moment diagram from settlement in the uncoupled analysis" loading="lazy"></a><figcaption>Moments from settlement at 30 years, uncoupled.</figcaption></figure><figure><a href="../images/settleframe-distortion.png"><img src="../images/settleframe-distortion.png" alt="Angular distortion of each bay over time with the 1/500 limit" loading="lazy"></a><figcaption>Angular distortion of each bay with the 1/500 limit.</figcaption></figure><figure><a href="../images/settleframe-web-app.jpg"><img src="../images/settleframe-web-app.jpg" alt="Screenshot of the SettleFrame web app" loading="lazy"></a><figcaption>The web version of the program.</figcaption></figure></div>
+
+<div class="pager"><span></span><a href="seismic-rc-frame.html">Seismic design and pushover analysis of a 3-story RC moment frame &rarr;</a></div>
+  </div>
+</main>
+<footer>
+  <div class="container">Sabit Timilsina &middot; Baton Rouge, LA &middot; Last updated November 2026</div>
+</footer>
+</body>
+</html>
